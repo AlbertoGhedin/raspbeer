@@ -9,6 +9,8 @@ It is a web application composed by:
 - Logic: the business logic. For example the class that opens the GAS when the temperature is to low
 
 Next steps:
+- clean repository (remove build, old code, ...)
+- clean code
 - test
 - mavenization
-- clean code
+
