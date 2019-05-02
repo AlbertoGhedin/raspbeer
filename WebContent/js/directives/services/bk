@@ -1,0 +1,30 @@
+angular.module('servicesApp', ['ngMaterial'])
+  .controller('AppCtrl', function($scope) {
+    var imagePath = 'img/list/60.jpeg';
+    $scope.messages = [{
+      face : imagePath,
+      what: 'Taglio ',
+      how: '30€',
+      notes: "Taglio completo"
+    }, {
+      face : imagePath,
+      what: 'Taglio, messa in piega',
+      how: '35€',
+      notes: "Taglio compleato e messa in piega"
+    }, {
+      face : imagePath,
+      what: 'Tinta',
+      how: '40€',
+      notes: "Tinta naturale"
+    }, {
+      face : imagePath,
+      what: 'Tinta, messa in piega',
+      how: '60€',
+      notes: " I'll be in your neighborhood doing errands"
+    }, {
+        face : imagePath,
+        what: 'Taglio, tinta, messa in piega',
+        how: '100€',
+        notes: " I'll be in your neighborhood doing errands"
+      }];
+  });

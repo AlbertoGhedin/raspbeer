@@ -1,0 +1,95 @@
+/*** Docs ***/
+
+
+
+
+/*** Calendar ***/
+
+.calAlert{
+  width: 595px; float: right; margin-bottom: 5px;
+}
+
+.calXBtn{
+  float: right; margin-top: -5px; margin-right: -5px;
+}
+
+.calWell{
+  float: left; 
+}
+
+.fc-event.openSesame .fc-event-skin{
+  background-color: rgb(229, 229, 11);
+  color: black;
+}
+
+.fc-event.customFeed .fc-event-skin{
+  background-color: rgb(132, 222, 175);
+  color: black;
+}
+
+.calTools{
+  margin-bottom: 10px;
+}
+
+
+
+.green {
+    border-radius: 10px !important;
+    background-color: hsl(110, 100%, 93%);
+}
+
+.red {
+    border-radius: 10px !important;
+    background-color: hsl(0, 100%, 93%);
+}
+
+.closed{
+	border-radius: 10px !important;
+	background-color: hsl(0, 0%, 93%);
+}
+
+.passed{
+	border-radius: 10px !important;
+	background-color: hsl(0, 0%, 93%);
+}
+
+
+
+.buttondemoBasicUsage section {
+  background: #f7f7f7;
+  border-radius: 3px;
+  text-align: center;
+  margin: 1em;
+  position: relative !important;
+  padding-bottom: 10px; }
+
+.buttondemoBasicUsage md-content {
+  margin-right: 7px; }
+
+.buttondemoBasicUsage section .md-button {
+  margin-top: 16px;
+  margin-bottom: 16px; }
+
+.buttondemoBasicUsage .label {
+  position: absolute;
+  bottom: 5px;
+  left: 7px;
+  font-size: 14px;
+  opacity: 0.54; }
+  
+
+
+.hideClass{
+	opacity: 0;
+}
+
+.fc-left h2{
+	white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5em;
+    font-style: inherit;
+    font-variant: inherit;
+    font-family: inherit;
+
+}

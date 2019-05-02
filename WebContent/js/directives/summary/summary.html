@@ -1,0 +1,53 @@
+	<md-toolbar>
+	<div class="md-toolbar-tools">
+		<md-button class="md-icon-button md-primary" ng-click="backCalendar()" aria-label="Go Back">
+        	<md-icon md-svg-icon="img/icons/back.svg"></md-icon>
+      	</md-button>
+		<h2>
+			<span>Prenota il servizio</span>
+		</h2>
+		<span flex></span>
+	</div>
+	</md-toolbar>
+
+<div class="md-padding" ng-cloak>
+
+
+	<md-card> <md-card-content>
+	<div layout="row" layout-align="space-between center">
+		<span>Servizio prenotato:</span> 
+		<span class="md-headline">{{getActualServiceName()}}</span>
+	</div>
+
+	<div layout="row" layout-align="space-between center">
+		<span>Data inizio servizio:</span> 
+		<span class="md-headline">{{getStartDate()}}</span>
+	</div>
+
+	<div layout="row" layout-align="space-between center">
+		<span>Ora inizio servizi</span> 
+		<span class="md-headline">{{getStartTime()}}</span>
+	</div>
+
+	<div ng-show="getStartDate()!=getEndDate()" layout="row"
+		layout-align="space-between center">
+		<span>Data fine servizio:</span> 
+		<span class="md-headline">{{getEndtDate()}}</span>
+	</div>
+
+	<div layout="row" layout-align="space-between center">
+		<span>Ora fine servizi</span> 
+		<span class="md-headline">{{getEndTime()}}</span>
+	</div>
+
+
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button class="md-raised" ng-click="doBooking()">Prenota</md-button>
+      <md-button class="md-raised "  ng-click="createEventOnMyCalendar()">Calendario</md-button>
+    </section>
+
+
+	</md-card-content> </md-card>
+
+</div>

@@ -1,0 +1,39 @@
+	<md-toolbar>
+	<div class="md-toolbar-tools">
+		<md-button class="md-icon-button md-primary" ng-click="backServices()" aria-label="Go Back">
+        	<md-icon md-svg-icon="img/icons/back.svg"></md-icon>
+      	</md-button>
+		<h2>
+			<span>Prenota il servizio</span>
+		</h2>
+		<span flex></span>
+		<md-button ng-click="prenota()" aria-label="OK" ng-disabled="getCurrentSelectedDate()">Prenota</md-button>
+	</div>
+	</md-toolbar>
+
+<div id="directives-calendar" class="well"	ng-class="{hideClass: !isShowCalendar()}">
+
+<section layout="row" layout-align="center center" ng-show="getView()=='month'">
+  <md-button class="groupX left" ng-click="mattina=!mattina; refresh();"  ng-class="{'md-raised': !mattina}">Mattina</md-button>
+  <md-button class="groupX middle md-raised" ng-click="pomeriggio=!pomeriggio; refresh();" ng-class="{'md-raised': !pomeriggio}">Pomeriggio</md-button>
+  <md-button class="groupX right md-raised" ng-click="sera=!sera; refresh();" ng-class="{'md-raised': !sera}">Sera</md-button>
+</section>
+
+
+<section layout="row" layout-align="center center" ng-show="getView()!='month'">
+  <md-button class="groupX middle md-raised" ng-click="changeView('month', 'myCalendar1')">Vista mese</md-button>
+</section>
+
+	<div style="height: 100%">
+		<div class="btn-toolbar">
+			<!-- div class="btn-group">
+				<button class="btn btn-success"	ng-click="changeView('basicWeek', 'myCalendar1')">Settimana</button>
+				<button class="btn btn-success"	ng-click="changeView('month', 'myCalendar1')">Mese</button>
+			</div -->
+		</div>
+		<div class="calendar" ng-model="eventSources" calendar="myCalendar1" ui-calendar="uiConfig.calendar"></div>
+
+
+	</div>
+
+</div>

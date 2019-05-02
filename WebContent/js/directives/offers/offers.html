@@ -1,0 +1,31 @@
+	<md-toolbar>
+	<div class="md-toolbar-tools">
+		<md-button class="md-icon-button md-primary" ng-click="backServices()" aria-label="Go Back">
+        	<md-icon md-svg-icon="img/icons/back.svg"></md-icon>
+      	</md-button>
+		<h2>
+			<span>Messaggi</span>
+		</h2>
+		<span flex></span>
+		
+
+	</div>
+	</md-toolbar>
+
+
+
+<div ng-controller="OffersController" ng-cloak>
+  <md-content class="md-padding" layout-xs="column" layout="row">
+  <div flex-xs flex-gt-xs="100" layout="column">
+      <md-card ng-repeat="item in offers">
+        <img ng-src="./img/offers/{{item.img}}" class="md-card-image" alt="Washed Out" style="{{item.imgstyle}}" >
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{item.title}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content >	 <div ng-bind-html="item.content"></div>    </md-card-content>
+      </md-card>
+      </div>
+	</md-content>
+</div>    

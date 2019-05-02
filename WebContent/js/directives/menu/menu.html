@@ -1,0 +1,29 @@
+   <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">Menu</h1>
+      </md-toolbar>
+
+  <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+    <div>
+    	
+     <md-content layout-margin>
+        <p>
+          Per accedere al servizio è necessario inserire i dati
+        </p>
+      </md-content>
+    <form name="account">
+	      
+		<md-input-container ng-repeat="info in userInfos">
+	        <label>{{info.text}}</label>
+	        <input ng-model="user[info.property]" type="{{info.type}}" required>
+		</md-input-container>
+	      
+	      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+		      <md-button class="md-raised" ng-disabled="!{{account.$valid}}" ng-click="toggleMenu()">Ok</md-button>
+		</section>
+	      
+      </form>
+    </div>
+  </md-content>
+
+</md-sidenav>

@@ -1,0 +1,35 @@
+
+<div ng-controller="ListCtrl">
+
+	<md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}"	style="padding-left: 10px" md-theme-watch/>
+	
+	<md-card-title> 
+		<md-card-title-text>
+			<span class="md-headline">Ingredienti per {{moltiplicatore*23}} litri di {{nome}}</span> 
+		</md-card-title-text>
+	</md-card-title> 
+	
+	 
+	  <md-list-item	ng-repeat="ingrediente in ingredienti">
+		<p>
+			<span style="color: rgba(0, 0, 0, 0.54);"> {{ingrediente.ingrediente }}:</span> <span ng-show="ingrediente.max">{{ingrediente.max * moltiplicatore}} /</span>{{ ingrediente.min*moltiplicatore}}{{ ingrediente.misura }}
+		</p>
+	<md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>
+	</md-list-item> </md-card>
+
+
+	<md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}"	style="padding-left: 10px" md-theme-watch/>
+		<md-card-title> 
+			<md-card-title-text>
+				<span class="md-headline">Note sulla preparazione</span> 
+			</md-card-title-text>
+		</md-card-title> 
+		<div style="padding:19px"id='_notes'></div>
+
+	</md-card>
+
+
+<md-button ng-click=save()>Salva</md-button>
+
+</div>
+

@@ -1,0 +1,29 @@
+	<md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch ng-class="{red: inesecuzione===true && tMosto>details.temperatura+0.5 && details.temperatura>0,orange: inesecuzione===true && tMosto<details.temperatura-0.5 && details.temperatura>0,green: inesecuzione===true && tMosto<=details.temperatura+0.5 && tMosto>=details.temperatura-0.5 && details.temperatura>0}">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{details.nome}}</span>
+            <span class="md-subhead" ng-show="details.temperatura!=null">Temperatura da raggiungere: {{details.temperatura}} C</span>
+			<span class="md-subhead" ng-show="details.luppolo!=null">Luppolo: {{details.luppolo}}</span>
+			<span class="md-subhead" ng-show="details.grammi!=null">Grammi: {{details.grammi*moltiplicatore}} g</span>
+			<span class="md-subhead" ng-show="details.tempo!=null">Tempo totale: {{details.tempo}}  min</span>
+			<span class="md-subhead" ng-show="details.tempo!=null">Tempo mancante: {{countDown}}</span>
+			<br></br>
+			<span class="md-subhead">Inizio Fase: {{inizio}}</span>
+			<span class="md-subhead">Fine Fase: {{fine}}</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-lg card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button ng-click=startButton(details.tempo)>Avvia</md-button>
+		  <md-button ng-click=pause()>Pausa</md-button>
+		  <md-button ng-click=stop()>Stop</md-button>
+		  <md-button ng-show="details.temperatura!=null" ng-click=mute()>Mute</md-button>
+        </md-card-actions>
+      </md-card>
+
+
+
+
+
